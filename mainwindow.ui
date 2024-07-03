@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>464</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(98, 160, 234);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="menu">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="title_menu">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; text-decoration: underline; color:#986a44;&quot;&gt;Exe04 - STL, Templates, Iterators&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_tree_type">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;select type of tree you would like to create:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <widget class="QRadioButton" name="select_words">
+              <property name="text">
+               <string>words</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <widget class="QRadioButton" name="select_numbers">
+              <property name="text">
+               <string>numbers</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <widget class="QRadioButton" name="select_complex_numbers">
+              <property name="text">
+               <string>complex numbers</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLabel" name="label_number_children">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;please enter max number of children for Node:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QSpinBox" name="button_number_children">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(205, 171, 143);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+         <widget class="QPushButton" name="button_to_creat_root">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(143, 240, 164);</string>
+          </property>
+          <property name="text">
+           <string>continue to creat tree</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="print_page">
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic;&quot;&gt;choose how would you like to print tree:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_print_begin_end">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(249, 240, 107);</string>
+            </property>
+            <property name="text">
+             <string>Begin-End</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_print_BFS">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(249, 240, 107);</string>
+            </property>
+            <property name="text">
+             <string>BFS</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_print_DFS">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(249, 240, 107);</string>
+            </property>
+            <property name="text">
+             <string>DFS</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_print_in_order">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(249, 240, 107);</string>
+            </property>
+            <property name="text">
+             <string>in order</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_print_pre_order">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(249, 240, 107);</string>
+            </property>
+            <property name="text">
+             <string>pre order</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_print_post_order">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(249, 240, 107);</string>
+            </property>
+            <property name="text">
+             <string>post order</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_print_and_tree_to_min_heap">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(249, 240, 107);</string>
+            </property>
+            <property name="text">
+             <string>tree to min heap</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_output_tree">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(99, 69, 44);</string>
+          </property>
+          <property name="placeholderText">
+           <string>here the tree will be printed when you choose an option.....</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_go_to_menu5">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 190, 111);</string>
+            </property>
+            <property name="text">
+             <string>back to menu</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_to_add_Node_page">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(87, 227, 137);</string>
+            </property>
+            <property name="text">
+             <string>add more Nodes</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="create_root">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_title_create_root">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700; color:#865e3c;&quot;&gt;string/double tree - let's create root:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLabel" name="label_value_root">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-style:italic;&quot;&gt;please enter the value for trees root: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLineEdit" name="input_root_value">
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c0bfbc;&quot;&gt;root value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="inputMask">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string notr="true">enter here</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_go_to_menu2">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 190, 111);</string>
+            </property>
+            <property name="text">
+             <string>go back to menu</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_create_root_continue_to_creat_tree">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(87, 227, 137);</string>
+            </property>
+            <property name="text">
+             <string>create root and continue</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="create_complex_root">
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_title_create_root_2">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700; color:#986a44;&quot;&gt;complex's numbers tree - let's create root:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_value_root_2">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-style:italic;&quot;&gt;please enter the value for trees root: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Please insert a real number for x in (x,yi) new Node : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLineEdit" name="input_complex_root_value1">
+            <property name="styleSheet">
+             <string notr="true">color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="placeholderText">
+             <string>enter here</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Please insert a real number for y in (x,yi) new Node : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLineEdit" name="input_complex_root_value2">
+            <property name="styleSheet">
+             <string notr="true">color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="placeholderText">
+             <string>enter here</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_go_to_menu3">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 190, 111);</string>
+            </property>
+            <property name="text">
+             <string>go back to menu</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="go_to_add_complex_nodes">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(87, 227, 137);</string>
+            </property>
+            <property name="text">
+             <string>continue to add Nodes</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="add_Node">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLabel" name="label_Node_value">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic;&quot;&gt;enter value for new Node:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLineEdit" name="input_new_Node_value">
+                <property name="styleSheet">
+                 <string notr="true">border-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="placeholderText">
+                 <string>enter here</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLabel" name="label_value_father_Node">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic;&quot;&gt;enter the father value (this Node will be his child) :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLineEdit" name="input_value_Node_father">
+                <property name="styleSheet">
+                 <string notr="true">border-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="placeholderText">
+                 <string>enter here</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_create_Node">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(87, 227, 137);</string>
+            </property>
+            <property name="text">
+             <string>creat new Node</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QTreeWidget" name="treeWidget">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(205, 171, 143);</string>
+          </property>
+          <column>
+           <property name="text">
+            <string>tree - nodes value :</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_go_to_menu1">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 190, 111);</string>
+            </property>
+            <property name="text">
+             <string>go back to menu</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_continue_to_print_page">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(87, 227, 137);</string>
+            </property>
+            <property name="text">
+             <string>continue to printing</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="add_complex_Node">
+       <layout class="QVBoxLayout" name="verticalLayout_16">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_26">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Please insert a real number for x in (x,yi) new Node : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLineEdit" name="input_value_conmplex_node_1">
+                <property name="styleSheet">
+                 <string notr="true">color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+                </property>
+                <property name="placeholderText">
+                 <string>enter here</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;Please insert a real number for y in (x,yi) new Node : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLineEdit" name="input_value_conmplex_node_2">
+                <property name="styleSheet">
+                 <string notr="true">color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+                </property>
+                <property name="placeholderText">
+                 <string>enter here</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_24">
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;Please insert a real number for x in (x,yi) Node father : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLineEdit" name="input_value_conmplex_father_node_1">
+                <property name="styleSheet">
+                 <string notr="true">color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+                </property>
+                <property name="placeholderText">
+                 <string>enter hare</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_23">
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;Please insert a real number for y in (x,yi)  Node father: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <widget class="QLineEdit" name="input_value_conmplex_father_node_2">
+                <property name="styleSheet">
+                 <string notr="true">color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+                </property>
+                <property name="placeholderText">
+                 <string>enter here</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_create_complex_node">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(87, 227, 137);</string>
+            </property>
+            <property name="text">
+             <string>creat new Node</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QTreeWidget" name="treeWidget_complex">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(205, 171, 143);</string>
+          </property>
+          <column>
+           <property name="text">
+            <string>complex tree - nodes by value :</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_27">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_go_to_menu4">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 190, 111);</string>
+            </property>
+            <property name="text">
+             <string>back to menu</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QPushButton" name="button_go_to_print_page">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(87, 227, 137);</string>
+            </property>
+            <property name="text">
+             <string>go to print tree page</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
